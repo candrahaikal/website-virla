@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Page</title>
+  <!--Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/core.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <!--Jquery-->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!--[if lt IE 9]>
+<link href="css/ie8/ie8.css" type="text/css" rel="stylesheet" />
+<![endif]-->
+
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+      overflow-x: hidden;
+      font-size: 16px;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .indent-text {
+      margin-left: 50px;
+      text-align: center;
+    }
+
+    .content-slide {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slide-container {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+      width: 100%;
+    }
+
+    .imgslide {
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    .imgslide.active {
+      opacity: 1;
+    }
+
+    img {
+      vertical-align: middle;
+      height: 600px;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+      $(".imgslide").first().addClass("active");
+
+      setInterval(function () {
+        var currentSlide = $(".imgslide.active");
+        var nextSlide = currentSlide.next();
+
+        if (nextSlide.length === 0) {
+          nextSlide = $(".imgslide").first();
+        }
+
+        currentSlide.removeClass("active");
+        nextSlide.addClass("active");
+
+        // Menggeser container untuk menampilkan slide berikutnya
+        $(".slide-container").css("transform", "translateX(-" + nextSlide.index() * 100 + "%)");
+      }, 3000); // Ganti slide setiap 3 detik
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <!--Header HTML Starts Here-->
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-4"><a id="logo" href="index.html">
+            <img src="images/logoFix.jpg" class="img-responsive" width="300" alt="" title="wordpress"></a> </div>
+        <div class="col-xs-12 col-sm-9 col-md-8">
+          <!--<div class="topPhone pull-right"><p>+1-9876543210</p></div>-->
+          <div class="clearfix"></div>
+          <nav class="navbar marginBottom">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle
+                    navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span> </button>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <nav>
+                  <ul class="nav navbar-nav mainNavigation">
+                    <li class="active"><a href="#">Home </a></li>
+                    <li><a href="award.html"> Award </a></li>
+                    <li><a href="why.html"> Why Choose Us </a></li>
+                    <li><a href="contact.html">Contact Us </a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-slide">
+      <div class="slide-container">
+        <img class="imgslide active" src="images/sampulgambar.jpg" alt="Gambar 1">
+        <img class="imgslide" src="images/sampulgambar2.jpg" alt="Gambar 2">
+        <img class="imgslide" src="images/sampul1.jpg" alt="Gambar 3">
+        <img class="imgslide" src="images/sampul3.jpg" alt="Gambar 4">
+        <img class="imgslide" src="images/sampul4.jpg" alt="Gambar 5">
+        <img class="imgslide" src="images/front.JPG" alt="Gambar 5">
+      </div>
+    </div>
+
+  </header>
+  <!--Header HTML Ends Here-->
+
+  <!-- Content HTML Starts Here-->
+  <section class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-lg-8 about">
+          <h1 class="heading">Pengurus Perseroan</h1>
+          <p>Susunan Pengurus sebagai berikut:</p>
+          <p><strong>Komisaris: Muzaki, SE</strong></p>
+          <p><strong>Direktur: Drs. Muwiknyo</strong></p>
+          <h1 class="heading">Tentang Kami</h1>
+          <h1 class="heading">PT. Perusahaan Bongkar Muat Berkah Sarana Inti</h1>
+          <p>PT. Perusahaan Bongkar Muat Berkah Sarana Inti ("Perusahaan") didirikan pada tanggal 24 Januari 1986 di
+            Jakarta, dan telah mengalami beberapa kali perubahan mengenai nama Perusahaan,
+          </p>
+          <p>PT. Perusahaan Bongkar Muat Berkah Sarana Inti berkedudukan dan beroperasi di Surabaya, dengan alamat di
+            Jalan Perak Barat No.143 Kota Surabaya, Jawa Timur 60177 telah memulai kegiatan operasional sejak tahun
+            1989. PT. PBM Berkah Sarana Inti juga memiliki kegiatan lain yaitu persewaan Forklift.
+          </p>
+          <p>PT. Perusahaan Bongkar Muat Berkah Sarana Inti memiliki 17 karyawan di tahun 2022</p>
+          <h3></h3>
+          <h3>Potensi yang dimiliki PT. PBM Berkah Sarana Inti:</h3>
+          <p>1. SDM yang baik</p>
+          <p>2. Kinerja yang baik (dibakukan dalam system manajemen mutu ISO 9001 : 2000)</p>
+          <p>3. Peralatan yang cukup memadai</p>
+          <p>4. Image Perusahaan yang baik</p>
+
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-4">
+          <h3>Bidang Usaha</h3>
+          <p>Kegiatan utama PT. PBM Berkah Sarana Inti adalah melaksanakan bongkar muat dari dan ke kapal serta
+            menerima dan menyerahkannya kepada pemilik barang yang dibagi menjadi 3 (tiga) bagian : </p>
+          <ul class="about">
+            <li>
+              <div class="media">
+                <div class="media-left"><span class="roundedBdr">1</span></div>
+                <div class="media-body">
+                  <h3>Stevedoring</h3>
+                  <p>Adalah suatu pekerjaan membongkar dari kapal ke dermaga, tongkang, truck dan sebaliknya dari
+                    dermaga, tongkang, truck dimuat dan disusun rapi di dalam kapal.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <div class="media-left"><span class="roundedBdr">2</span></div>
+                <div class="media-body">
+                  <h3>Cargodoring</h3>
+                  <p>Adalah suatu kegiatan mengangkut barang dari dermaga ke gudang/lapangan penumpukan dan sebaliknya.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <div class="media-left"><span class="roundedBdr">3</span></div>
+                <div class="media-body">
+                  <h3>Receiving/ delivery </h3>
+                  <p>Adalah suatu kegiatan mengambil barang dari gudang atau lapangan penumpukan dan diserahkan pada
+                    pemilik barang dan sebaliknya.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section class="testimonial">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="heading">Pelanggan Utama :</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>PT. Perusahaan Bongkar Muat Berkah Sarana Inti adalah :</p>
+            <p>1. International Total Service & Logistic</p>
+            <p>2. Eastern car Liner</p>
+            <p>3. PT. Karana Line</p>
+            <p>4. PT. Dalian Putra Maritim</p>
+            <p>5. PT. Sunrise Steel</p>
+            <p>6. PT. Karana Panorama Logistik</p>
+            <p>7. PT. Panca Kusuma Logistik</p>
+            <p>8. PT. Steel Pipe Indonesia</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!--Content HTML Ends Here-->
+
+  <!-- Footer  HTML Starts Here-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- Footer HTML Ends Here-->
+
+</body>
+
+</html>
